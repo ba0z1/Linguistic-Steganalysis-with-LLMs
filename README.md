@@ -92,7 +92,7 @@ model.eval()
 ```
 Finally, input the sentence and prompt to detect any stegos.
 ```python
-input_sentence = "i guess if a film has magic i do n't need it to be fluid or seamless"
+input_sentence = "i guess if a film has magic i don't need it to be fluid or seamless"
 input_text = f"### Text:\n{input_sentence.strip()}\n\n### Question:\nIs the above text steganographic or non-steganographic?\n\n### Answer:\n"
 input_text = tokenizer.bos_token + input_text if tokenizer.bos_token != None else input_text
 inputs = tokenizer([input_text], return_tensors="pt").to("cuda")
@@ -102,9 +102,8 @@ print(output)
 ```
 You might get the following output.
 ```shell
-No.
+Non-steganographic
 
-### Question:
-Is
+###
 ```
 In data, there are 3 sub-directories named ac, hc5, and adg. You can find stego.txt and cover.txt in them. The prompt we used is the prompt model trained.
