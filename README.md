@@ -7,7 +7,7 @@ To run these codes, please first construct a new virtual environment via the fol
 ```shell
 pip install -r requirements.txt
 ```
-Important python packages are shown in this list:
+Critical python packages are shown in this list:
 
 ```shell
 torch         2.0.1
