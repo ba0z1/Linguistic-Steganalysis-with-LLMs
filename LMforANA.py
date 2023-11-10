@@ -365,7 +365,7 @@ def train(
     logger.info("Training succeeded")
 
 
-def convert_txt2jsonl(input_dir="/data/yjs/LMforANA/dataset/tweet/ac"):
+def convert_txt2jsonl(input_dir=""):
     stegos = open(os.path.join(input_dir, "stego.txt"),encoding='utf-8').read().split("\n")
     covers = open(os.path.join(input_dir, "cover.txt"),encoding='utf-8').read().split("\n")
     with jsonlines.open(os.path.join(input_dir, "train.jsonl"), "w") as f:
@@ -451,16 +451,15 @@ if __name__ == "__main__":
     i = 3
     parser = argparse.ArgumentParser()
     parser.add_argument("--model_config_file", type=str,
-                        default="./configs/TrainLM_bloomz-7b1.json")
+                        default="./configs/TrainLM_llama-7b-hf.json")
     parser.add_argument("--deepspeed", type=str, help="deepspeed config")
     parser.add_argument("--resume_from_checkpoint", action="store_true", default=False)
     parser.add_argument("--lora_hyperparams_file", default="./configs/lora_config.json", type=str, help="Provide it when use_lora=True")
     parser.add_argument("--use_lora", action="store_true", default=False, help="Use lora")
     parser.add_argument("--local_rank", type=int)
     parser.add_argument("--cache_dir", type=str, default="/data/huggingface", help="the huggingface cache path in the used machine, usually ~/.cache/huggingface")
-    # parser.add_argument("--data_path", type=str, default="/data/yjs/Reddit/t5_12p4l2/clean_text.jsonl")
     parser.add_argument("--output_dir", type=str, default="model")
-    parser.add_argument("--data_dir", type=str, default="data/movie/hc5/")
+    parser.add_argument("--data_dir", type=str, default="data/data/")
     parser.add_argument("--num_epoches", type=int, default=10)
     parser.add_argument("--tr", type=int, default=8000)
     parser.add_argument("--ratio", type=float, default=1)
