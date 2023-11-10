@@ -1,0 +1,14 @@
+{
+  "model_type": "GPT2",
+  "model_name_or_path": "gpt2",
+  "batch_size": 32,
+  "per_device_train_batch_size": 32,
+  "num_epochs": 1,
+  "learning_rate": 1e-5,
+  "cutoff_len": 512,
+  "val_set_rate": 0.001,
+  "save_steps": 1000,
+  "eval_steps": 1000,
+  "warmup_steps": 10,
+  "logging_steps": 10
+}

@@ -1,0 +1,14 @@
+{
+  "model_type": "llama",
+  "model_name_or_path": "decapoda-research/llama-7b-hf",
+  "batch_size": 4,
+  "per_device_train_batch_size": 4,
+  "num_epochs": 1,
+  "learning_rate": 5e-6,
+  "cutoff_len": 128,
+  "val_set_rate": 0.01,
+  "save_steps": 1000,
+  "eval_steps": 1000,
+  "warmup_steps": 10,
+  "logging_steps": 100
+}

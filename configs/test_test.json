@@ -1,0 +1,14 @@
+{
+  "model_type": "llama",
+  "model_name_or_path": "/data/bmh/LMforANA/merge_models/merge/tweet_5movie/",
+  "batch_size": 4,
+  "per_device_train_batch_size": 4,
+  "num_epochs": 1,
+  "learning_rate": 3e-5,
+  "cutoff_len": 128,
+  "val_set_rate": 0.001,
+  "save_steps": 1000,
+  "eval_steps": 1000,
+  "warmup_steps": 10,
+  "logging_steps": 100
+}
