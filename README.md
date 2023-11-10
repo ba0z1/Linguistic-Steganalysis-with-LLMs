@@ -107,3 +107,5 @@ Non-steganographic
 ###
 ```
 In data, there are 3 sub-directories named ac, hc5, and adg. You can find stego.txt and cover.txt in them. The prompt we used is the prompt model trained.
+## Finetune a steganalysis model
+See LMforANA.py for more details.
