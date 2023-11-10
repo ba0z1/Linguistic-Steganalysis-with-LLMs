@@ -22,3 +22,6 @@ GS-llama Model can be downloaded from [https://cloud.tsinghua.edu.cn/d/55a2efbf5
 Llama Model is available in [https://huggingface.co/linhvu/decapoda-research-llama-7b-hf/tree/main](https://huggingface.co/linhvu/decapoda-research-llama-7b-hf/tree/main).
 
 ## Detect single sentence
+Follow the test.ipynb, and you can use sentences in data to test the GS-llama model. 
+
+In data, there are 3 sub-directories named ac, hc5, and adg. You can find stego.txt and cover.txt in them. The prompt we used is the prompt model trained.
