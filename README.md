@@ -53,7 +53,7 @@ from peft import (
 ```
 Then we need to load the model and pick up the lora weight.
 ```python
-model_name_or_path = "/data/huggingface/hub/models--decapoda-research--llama-7b-hf/snapshots/5f98eefcc80e437ef68d457ad7bf167c2c6a1348"
+model_name_or_path = "path/to/llama"
 load_in_8bit = True
 device_map = "auto"
 model = LlamaForCausalLM.from_pretrained(
@@ -83,7 +83,7 @@ config = LoraConfig(
 )
 model = get_peft_model(model, config)
 use_lora = True
-lora_weight_path = "/data/bmh/LMforANA/mixv3/adapter_model.bin"
+lora_weight_path = "path/to/lora/weight/adapter_model.bin"
 if use_lora:
     ckpt_name = lora_weight_path
     lora_weight = torch.load(ckpt_name)
